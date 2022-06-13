@@ -1,5 +1,14 @@
 import React from 'react'
+import SingerList from './Components/SingerList'
+import Title from './Components/Title'
 
-const App = () => <h1>Hello World!</h1>
+const App = () => {
+  return (
+    <>
+      <Title />
+      <SingerList />
+    </>
+  )
+}
 
 export default App
