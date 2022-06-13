@@ -1,14 +1,24 @@
 import React from 'react'
 
 
-function SingerCard({name, genre, country}) {
+function SingerCard({singer, onSingerClick}) {
+  
+  let isLiked = singer.liked ? 'Yes' : 'No'
+  
+
   return (
-    <div className="singerCard">
+    <div
+    onClick={() => onSingerClick(singer)}
+    className="singerCard">
       <div className="singerWrapper">
-        <div className="name">{name}</div>
-        <div className="genre">{genre}</div>
-        <div className="country">{country}</div>
-      </div>  
+        <div className="name">{singer.name}</div>
+        <div className="genre">{singer.genre}</div>
+        <div className="country">{singer.country}</div>
+      </div> 
+      <div className="likedWrapper">  
+        <div className="likedTitle">Liked</div>
+        <div className="likedStatus">{isLiked}</div>
+      </div> 
     </div>
   )
 }

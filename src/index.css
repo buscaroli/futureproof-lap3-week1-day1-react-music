@@ -36,20 +36,47 @@ code {
 }
 
 .singerCard {
-  /* width: 400px; */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   height: 200px;
   border: 1px solid black;
   border-radius: 20px;
-  margin: 20px 0;
-  background-color: bisque;
+  margin: 20px 0;background-color: bisque;
 }
 
 .singerWrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;;
+  align-items: center;
   font-size: 1.8rem;
   padding: 10px;
 }
 
 .name {
-  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.country {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.likedWrapper {
+  width: 20%;
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;;
+}
+
+.likedTitle {
+
+}
+
+.likedStatus {
   font-weight: bold;
 }
