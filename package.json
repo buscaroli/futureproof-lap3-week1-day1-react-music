@@ -5,7 +5,15 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack serve --mode development --config config/webpack.config.dev.js",
-    "build": "webpack --config config/webpack.config.production.js"
+    "build": "webpack --config config/webpack.config.production.js",
+    "test": "jest --env=jsdom --watch --setupFilesAfterEnv ./src/test/setupTests.js",
+    "coverage": "jest --setupFilesAfterEnv ./src/test/setupTests.js --coverage --silent --watchAll=false"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js"
+    }
   },
   "author": "",
   "license": "ISC",
@@ -18,9 +26,15 @@
     "react-dom": "^18.1.0"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.3.0",
+    "@testing-library/user-event": "^13.5.0",
+    "babel-jest": "^28.1.1",
     "babel-loader": "^8.2.5",
     "css-loader": "^6.7.1",
     "html-webpack-plugin": "^5.5.0",
+    "jest": "^28.1.1",
+    "jest-environment-jsdom": "^28.1.1",
     "style-loader": "^3.3.1",
     "webpack": "^5.73.0",
     "webpack-cli": "^4.10.0",

@@ -8,7 +8,6 @@ function SingerCard({singer, onSingerClick}) {
 
   return (
     <div
-    onClick={() => onSingerClick(singer)}
     className="singerCard">
       <div className="singerWrapper">
         <div className="name">{singer.name}</div>
@@ -17,7 +16,11 @@ function SingerCard({singer, onSingerClick}) {
       </div> 
       <div className="likedWrapper">  
         <div className="likedTitle">Liked</div>
-        <div className="likedStatus">{isLiked}</div>
+        <div 
+        role = "comment" className="likedStatus">{isLiked}</div>
+        <button
+          onClick={() => onSingerClick(singer)}
+          >Click</button>
       </div> 
     </div>
   )

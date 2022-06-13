@@ -2,7 +2,7 @@ import React from 'react'
 
 function Title() {
   return (
-    <div className="title">MuzicBox</div>
+    <h1 role="heading" aria-level="1" className="title">MuzicBox</h1>
   )
 }
 

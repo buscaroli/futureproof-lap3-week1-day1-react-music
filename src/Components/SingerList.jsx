@@ -51,7 +51,6 @@ function SingerList() {
   const [list, setList] = useState(singers)
   
   const onSingerClick = (singer) => {
-    console.log(singer)
     let newList = []
     
     list.forEach(sng => {
@@ -64,7 +63,7 @@ function SingerList() {
   const renderList = list.map(sng => <SingerCard key={sng.id} singer={sng} onSingerClick={onSingerClick}/>)
 
   return (
-    <div className="singerList">
+    <div role="list" className="singerList">
       {renderList}
     </div>
   )
